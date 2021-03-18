@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Signup for HTML, CSS and Javascript newsletter.">    <!-- To increase SEO rating -->
+    <meta name="description" content="Signup form for HTML, CSS and Javascript newsletter.">    <!-- To increase SEO rating -->
     <title>Registration form</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -23,76 +23,82 @@
     <div class="wrapper">
         <main>
             <form action="index.html" method="post">
-                <!-- Main section 1 -->
-                <h2>Contact Information</h2>
-
-                <label for="name">Full Name</label>
-                <input class="input-section1" type="text" id="name" name="user_name">
- 
-                <label for="email">Email Address</label>
-                <input class="input-section1" type="email" id="email" name="user_email">
+                <!-- Section 1 -->
+                <fieldset>
+                    <legend>Contact Information</legend>
                 
-                <label for="phone">Phone Number</label>
-                <input class="input-section1" type="tel" id="phone" name="user_phone">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="user_name">
+    
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="user_email">
+                    
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="user_phone">
 
-                <label for="street">Street Address</label>
-                <input class="input-section1" type="text" id="street" name="user_street">
+                    <label for="street">Street Address</label>
+                    <input type="text" id="street" name="user_street">
 
-                <label for="city">City</label>
-                <input class="input-section1" type="text" id="city" name="user_city">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="user_city">
 
-                <label for="state">State</label>
-                <select id="state" name="user_state">
-                    <!-- optgroup -->
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
+                    <label for="state">State</label>
+                    <select id="state" name="user_state">
+                        <!-- optgroup -->
+                        <option value="none"></option>
+                        <option value="state_1">State 1</option>
+                        <option value="state_2">State 2</option>
+                        <option value="state_3">State 3</option>
+                    </select>
 
-                <label for="zip">Zip Code</label>
-                <input class="input-section1" type="text" id="zip" name="user_zip" pattern="[0-9]*">    <!-- Source: https://css-tricks.com/html-for-zip-codes/ -->
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="user_zip" pattern="[0-9]*">    
+                    <!-- Source: https://css-tricks.com/html-for-zip-codes/ -->
+                </fieldset>
 
                 <hr class="hr-two">
 
                 <!-- Checkboxes -->
+                <fieldset>
+                    <legend>Newsletter</legend>
+                    <label class="label-section2">Select the newsletters you would like to receive</label><br>
+                    
+                    <label for="html_news">
+                        <input type="checkbox" id="html_news" value="html" name="newsletter">
+                        HTML News 
+                    </label><br>
 
-                <h2>Newsletter</h2>
-                <label class="label-section2">Select the newsletters you would like to receive</label><br>
+                    
+                    <label for="css_news">
+                        <input type="checkbox" id="css_news" value="css" name="newsletter">
+                        CSS News
+                    </label><br>
+
+                    
+                    <label for="javascript_news">
+                        <input type="checkbox" id="javascript_news" value="javascript" name="newsletter"> 
+                        Javascript News
+                    </label><br><br>
+
+                    <!-- Radio buttons -->
+                    <label>Newsletter format</label><br>
+                    
+                    <label for="html">
+                        <input type="radio" id="html" value="html_format" name="format">
+                        HTML
+                    </label><br>
+
+                    <label for="plain_text">
+                        <input type="radio" id="plain_text" value="plain_text" name="format">
+                        Plain text 
+                    </label><br><br>
+
+                    <label for="comment">Other topics you'd like to hear about</label><br>
+                    <textarea name="user_comment" id="comment" cols="20" rows="6"></textarea><br><br>
+
+                    <button type="submit">Sign Up</button>
+                </fieldset>
                 
-                <label for="html_news">
-                    <input type="checkbox" id="html_news" value="html_news" name="newsletter">
-                    HTML News 
-                </label><br>
-
-                 
-                <label for="css_news">
-                    <input type="checkbox" id="css_news" value="css_news" name="newsletter">
-                    CSS News
-                </label><br>
-
-                
-                <label for="javascript_news">
-                    <input type="checkbox" id="javascript_news" value="javascript_news" name="newsletter"> 
-                    Javascript News
-                </label><br><br>
-
-                <!-- Radio buttons -->
-                <label>Newsletter format</label><br>
-                
-                <label for="html">
-                    <input type="radio" id="html" value="html" name="format">
-                    HTML
-                </label><br>
-
-                <label for="plain_text">
-                    <input type="radio" id="plain_text" value="plain_text" name="format">
-                    Plain text 
-                </label><br><br>
-
-                <label for="comment">Other topics you'd like to hear about</label><br>
-                <textarea name="user_comment" id="comment" cols="20" rows="6"></textarea><br><br>
-
-                <button type="submit">Sign Up</button>
             </form>
         </main>
 

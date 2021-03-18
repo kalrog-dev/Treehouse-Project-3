@@ -3,6 +3,7 @@
 }
 body {
     font-family: 'Prata', serif;
+    margin: auto;
 }
 .wrapper {
     width: 90%;
@@ -48,7 +49,18 @@ header p {
     border: none;
     border-top: 2px solid #2d3945;
 }
-.input-section1,
+fieldset {
+    border: none;
+    margin: auto;
+    padding: 0;
+}
+legend {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: #2d3945;
+}
+fieldset > input,
 select {
     margin: 0.5rem 0;
     height: 2.5rem;
@@ -58,7 +70,7 @@ label {
     font-size: 0.8rem;
     color: #495d70;
 }
-h2 + label {
+legend + label {
     margin-top: 0.5rem;
 }
 input,
@@ -80,6 +92,10 @@ input[type=radio],
 input[type=checkbox] {
     width: auto;
     margin: 0.3rem 0.3rem 0.3rem 0;
+}
+input,
+textarea {
+    padding: 0.4rem;
 }
 textarea {
     margin-top: 0.4rem;
