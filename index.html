@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Signup for HTML, CSS and Javascript newsletter.">    <!-- To increase SEO rating -->
     <title>Registration form</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -33,11 +35,11 @@
                 <label for="phone">Phone Number</label>
                 <input class="input-section1" type="tel" id="phone" name="user_phone">
 
-                <label for="">Street Address</label>
-                <input class="input-section1" type="" id="" name="">
+                <label for="street">Street Address</label>
+                <input class="input-section1" type="text" id="street" name="user_street">
 
-                <label for="">City</label>
-                <input class="input-section1" type="" id="" name="">
+                <label for="city">City</label>
+                <input class="input-section1" type="text" id="city" name="user_city">
 
                 <label for="state">State</label>
                 <select id="state" name="user_state">
@@ -47,24 +49,47 @@
                     <option value=""></option>
                 </select>
 
-                <label for="">Zip Code</label>
-                <input class="input-section1" type="" id="" name="">
+                <label for="zip">Zip Code</label>
+                <input class="input-section1" type="text" id="zip" name="user_zip" pattern="[0-9]*">    <!-- Source: https://css-tricks.com/html-for-zip-codes/ -->
 
                 <hr class="hr-two">
 
-                <!-- Main section 2 -->
+                <!-- Checkboxes -->
+
                 <h2>Newsletter</h2>
-
                 <label class="label-section2">Select the newsletters you would like to receive</label><br>
-                <input class="checkbox-input" type="checkbox" id="html_news" value="html_news" name="newsletter"> <label for="html_news">HTML News</label><br>
-                <input class="checkbox-input" type="checkbox" id="css" value="css_news" name="newsletter"> <label for="css">CSS News</label><br>
-                <input class="checkbox-input" type="checkbox" id="javascript_news" value="javascript_news" name="newsletter"> <label for="javascript_news">Javascript News</label><br><br>
+                
+                <label for="html_news">
+                    <input type="checkbox" id="html_news" value="html_news" name="newsletter">
+                    HTML News 
+                </label><br>
 
-                <label class="label-section2">Newsletter format</label><br>
-                <input class="radio-input" type="radio" id="html" value="html" name="format"> <label for="html">HTML</label><br>
-                <input class="radio-input" type="radio" id="plain_text" value="plain_text" name="format"> <label for="plain_text">Plain text</label><br><br>
+                 
+                <label for="css_news">
+                    <input type="checkbox" id="css_news" value="css_news" name="newsletter">
+                    CSS News
+                </label><br>
 
-                <label class="label-section2" for="comment">Other topics you'd like to hear about</label><br>
+                
+                <label for="javascript_news">
+                    <input type="checkbox" id="javascript_news" value="javascript_news" name="newsletter"> 
+                    Javascript News
+                </label><br><br>
+
+                <!-- Radio buttons -->
+                <label>Newsletter format</label><br>
+                
+                <label for="html">
+                    <input type="radio" id="html" value="html" name="format">
+                    HTML
+                </label><br>
+
+                <label for="plain_text">
+                    <input type="radio" id="plain_text" value="plain_text" name="format">
+                    Plain text 
+                </label><br><br>
+
+                <label for="comment">Other topics you'd like to hear about</label><br>
                 <textarea name="user_comment" id="comment" cols="20" rows="6"></textarea><br><br>
 
                 <button type="submit">Sign Up</button>

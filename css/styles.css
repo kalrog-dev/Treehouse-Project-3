@@ -28,7 +28,7 @@ h2 {
 }
 p {
     font-size: 0.85rem;
-    color: #aaa;
+    color: #495d70;
 }
 header p {
     margin-top: -0.3rem;
@@ -58,7 +58,7 @@ label {
     font-size: 0.8rem;
     color: #495d70;
 }
-.label-section2 {
+h2 + label {
     margin-top: 0.5rem;
 }
 input,
@@ -76,8 +76,8 @@ textarea:focus,
 button:focus {
     outline-color: #45698b;
 }
-.radio-input,
-.checkbox-input {
+input[type=radio],
+input[type=checkbox] {
     width: auto;
     margin: 0.3rem 0.3rem 0.3rem 0;
 }
@@ -88,13 +88,13 @@ textarea {
 }
 button {
     padding: 1rem 0;
-    background: #4ebbb5;
+    background: #2b6e6b;
     color: #fff;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 footer {
-    color: #aaa;
+    color: #495d70;
     margin-bottom: 0.5rem;
 }
 
