@@ -29,6 +29,8 @@ h2 {
 }
 p {
     font-size: 1em;
+    margin: 0;
+    line-height: 1.5rem;
     color: #495d70;
 }
 header p {
