@@ -78,7 +78,8 @@ label {
     line-height: 2rem;
     color: #495d70;
 }
-label + input {
+label + input,
+select {
     margin-top: 0;
 }
 input,
