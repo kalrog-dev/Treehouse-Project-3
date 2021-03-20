@@ -66,6 +66,11 @@ fieldset > input,
 select {
     margin: 0.5rem 0;
     height: 3.5rem;
+    transition: 1s;
+}
+fieldset > input:focus,
+select:focus {
+    background: #ccc;
 }
 label {
     display: inline-block;
@@ -97,20 +102,35 @@ input[type=checkbox] {
     margin: 0.3rem;
 }
 input::placeholder {
-    text-align: right;
     color: #999;
+}
+input[required]::placeholder {
+    text-align: right;
 }
 input:focus::placeholder {
     color: transparent;
     /* Source: https://stackoverflow.com/questions/9707021/how-do-i-auto-hide-placeholder-text-upon-focus-using-css-or-jquery */
 }
-select:required:invalid { 
-    color: #999; 
-}
 input,
 textarea,
 select {
     padding: 0.8rem;
+}
+fieldset:nth-of-type(2) {
+    background: #cdcdcd;
+    padding: 0.3rem 1rem 1rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+fieldset:nth-of-type(2) label {
+    color: #28333e;
+}
+fieldset:nth-of-type(2) legend {
+    float: left;
+}
+fieldset:nth-of-type(2) p {
+    clear: both;
+    color: #28333e;
 }
 textarea {
     margin-top: 0.4rem;
