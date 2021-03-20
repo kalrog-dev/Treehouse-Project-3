@@ -102,6 +102,12 @@ input[type=checkbox] {
     width: auto;
     margin: 0.3rem;
 }
+label[for=zip] {
+    width: 100%;
+}
+input[id=zip] {
+    width: 50%;
+}
 input::placeholder {
     color: #999;
 }
@@ -151,6 +157,7 @@ footer {
 }
 
 
+
 /*---Media queries---*/
 @media screen and (min-width: 768px) {
     .wrapper {
@@ -171,13 +178,15 @@ footer {
     label + select {
         flex: 1 1 65%;
     }
+    input[id=zip] {
+        flex: 0 1 22%;
+    }
 }
 
 @media screen and (min-width: 1400px) {
     label {
         flex-basis: 20%;
     }
-
     label + input,
     label + select {
         flex: 1 1 80%;
