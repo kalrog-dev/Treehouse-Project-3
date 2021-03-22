@@ -111,9 +111,6 @@ input[id=zip] {
 input::placeholder {
     color: #999;
 }
-input[required]::placeholder {
-    text-align: right;
-}
 input:focus::placeholder {
     color: transparent;
     /* Source: https://stackoverflow.com/questions/9707021/how-do-i-auto-hide-placeholder-text-upon-focus-using-css-or-jquery */
@@ -161,9 +158,9 @@ footer {
 /*---Media queries---*/
 @media screen and (min-width: 768px) {
     .wrapper {
-        width: 50%;
+        max-width: 850px;
     }
-   body {
+    body {
         font-size: large;
     }
     fieldset:first-child {
@@ -171,24 +168,14 @@ footer {
         flex-wrap: wrap;
     }
     label {
-        flex-basis: 35%;
+        flex-basis: 25%;
         align-self: center;
     }
     label + input,
     label + select {
-        flex: 1 1 65%;
+        flex: 1 1 75%;
     }
     input[id=zip] {
         flex: 0 1 22%;
-    }
-}
-
-@media screen and (min-width: 1400px) {
-    label {
-        flex-basis: 20%;
-    }
-    label + input,
-    label + select {
-        flex: 1 1 80%;
     }
 }
