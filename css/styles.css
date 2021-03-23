@@ -70,7 +70,7 @@ select {
 }
 fieldset > input:focus,
 select:focus {
-    background: #cdcdcd;
+    background: #d6d6d6;
 }
 label {
     display: inline-block;
